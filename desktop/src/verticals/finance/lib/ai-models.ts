@@ -20,7 +20,7 @@
 
 export type ProviderId =
   | "deepseek" | "silicon" | "openai-api" | "minimax" | "openrouter"
-  | "groq" | "together" | "mimo" | "glm" | "kimi" | "qwen"
+  | "groq" | "together" | "atlascloud" | "mimo" | "glm" | "kimi" | "qwen"
   | "openai-compatible"
   | "cli-codex" | "cli-claude" | "cli-codebuddy";
 
@@ -52,6 +52,7 @@ export const PROVIDER_BASE: Partial<Record<ProviderId, string>> = {
   openrouter: "https://openrouter.ai/api/v1",
   groq: "https://api.groq.com/openai/v1",
   together: "https://api.together.xyz/v1",
+  atlascloud: "https://api.atlascloud.ai/v1",
   "openai-compatible": "",
 };
 
@@ -81,6 +82,7 @@ export const AI_MODELS: ModelConfig[] = [
   { id: "openai/gpt-4o", name: "OpenRouter · GPT-4o", description: "OpenRouter 聚合（model 可改任意 id）", provider: "openrouter" },
   { id: "llama-3.3-70b-versatile", name: "Groq · Llama 3.3 70B", description: "Groq 超快推理", provider: "groq" },
   { id: "meta-llama/Llama-3.3-70B-Instruct-Turbo", name: "Together · Llama 3.3 70B", description: "Together AI", provider: "together" },
+  { id: "deepseek-ai/deepseek-v4-flash", name: "Atlas Cloud · DeepSeek V4 Flash", description: "Atlas Cloud 聚合（model 可改任意 id）", provider: "atlascloud" },
   { id: "custom", name: "其它 OpenAI 兼容端点", description: "任意兼容端点，自填 baseURL / model", provider: "openai-compatible" },
 ];
 

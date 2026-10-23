@@ -12,6 +12,7 @@ test("自定义端点保存重读后保留来源、模型及密钥，预设不�
     ["openai-compatible", "my-model", "custom"],
     ["openai-compatible", "gpt-4o", "custom"],
     ["openrouter", "my-model", "openai/gpt-4o"],
+    ["atlascloud", "my-model", "deepseek-ai/deepseek-v4-flash"],
     ["deepseek", "deepseek-v4-pro", "deepseek-v4-pro"],
   ]) {
     const cfg = { provider, model, apiKey: "fixture-key", baseURL: "https://example.com/v1" };
